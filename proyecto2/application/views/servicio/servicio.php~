@@ -1,0 +1,62 @@
+<h1>Servicios</h1>
+<?php
+$atributos = array( 'id' => 'miformulario','name'=>'form');
+//echo form_open(null, $atributos);
+echo form_open_multipart(null,$atributos);
+?>
+
+<p>
+Rut : 
+</p>
+ <?php 
+$datos = array(
+              'name'        => 'rut',
+              'id'          => 'rut',
+              'maxlength'   => '9',
+            );
+
+echo form_input($datos,'');
+?>
+
+<hr />
+
+<P>
+Tipo de Usuario :
+</p>	
+<select name="usuario">
+    <option value="estudiante">Estudiante</option>
+    <option value="docente">Docente</option>
+    <option value="tesista">Tesista</option>
+</select>
+
+<hr />
+
+Email de Contacto : 
+ <?php 
+$datos = array(
+              'name'        => 'email',
+              'id'          => 'email',
+              'maxlength'   => '50',
+            );
+
+echo form_input($datos,'');
+?>
+
+<hr />
+
+Requerimientos : 
+ <?php 
+$datos = array(
+              'name'        => 'requerimientos',
+              'type'        =>'textarea',
+              'id'          => 'requerimientos',
+              'rows'        =>'5',
+              'cols'        =>'30'
+            );
+
+echo form_textarea($datos,'');
+?>
+<hr />
+
+<input type="submit" value="Enviar" title="Enviar" />
+</form>
